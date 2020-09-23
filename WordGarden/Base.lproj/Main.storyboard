@@ -76,7 +76,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fh-Td-Ztb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fh-Td-Ztb">
                                 <rect key="frame" x="16" y="131" width="278" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9PX-WQ-cm2"/>
@@ -95,7 +95,11 @@
                                             <constraint firstAttribute="width" constant="34" id="tAR-IW-38G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="n49-C5-tNq"/>
+                                            <action selector="guessLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="z8X-pd-OGE"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-VH-z5d">
                                         <rect key="frame" x="51" y="0.0" width="150" height="30"/>
@@ -164,7 +168,7 @@
                         <outlet property="playAgainButton" destination="Cld-Xp-JAw" id="6un-TO-7lY"/>
                         <outlet property="wordsBeingRevealedLabel" destination="4fh-Td-Ztb" id="S2o-4O-oMr"/>
                         <outlet property="wordsGuessedLabel" destination="UJk-wi-JuU" id="C3R-tU-PzF"/>
-                        <outlet property="wordsInGame" destination="dpg-TJ-FgM" id="77q-6o-Xca"/>
+                        <outlet property="wordsInGameLabel" destination="dpg-TJ-FgM" id="77q-6o-Xca"/>
                         <outlet property="wordsMissedLabel" destination="nVo-W9-5uF" id="5ac-Qu-8cR"/>
                         <outlet property="wordsRemainingLabel" destination="BdK-na-5wM" id="E2O-jF-7OR"/>
                     </connections>
